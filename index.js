@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import user from './src/routes/user.route';
 // import Trip from './src/routes/trip.route';
-// import Bus from './src/routes/bus.route';
+import Bus from './src/routes/bus.route';
 // import Booking from './src/routes/booking.route';
 
 dotenv.config();
@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 app.use('/api/v1/auth', user);
 // app.use('/api/v1/', Trip);
-// app.use('/api/v1/', Bus);
+app.use('/api/v1/', Bus);
 // app.use('/api/v1', Booking);
 
 app.get('', (req, res) => {

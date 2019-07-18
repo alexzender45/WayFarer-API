@@ -10,7 +10,7 @@
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "showcoverage": "start ./coverage/index.html",
     "start": "set DEBUG=http & nodemon --exec babel-node index.js",
-    "create": "babel-node src/model/createTables.js createTables",
+    "create": "babel-node src/model/ createTables",
     "drop": "babel-node src/model dropTables",
     "lint": "eslint --init"
   },

@@ -4,7 +4,7 @@
   "description": "Public bus booking app",
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint --ignore-path .gitignore .",
+    "pretest": "eslint",
     "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha --require @babel/register --timeout 120000 --require @babel/polyfill src/test --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",

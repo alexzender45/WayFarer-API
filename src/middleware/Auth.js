@@ -15,7 +15,7 @@ const Authentication = {
   generate_token(user_id, is_admin, email) {
     const token = jwt.sign({ user_id, is_admin, email },
       process.env.SECRET, {
-        expiresIn: '24h',
+        expiresIn: '7d',
       });
     return token;
   },

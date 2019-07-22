@@ -26,6 +26,6 @@ app.get('', (req, res) => {
   res.send('connected');
 });
 const port = process.env.PORT || 7000;
-const server = app.listen(port, () => logger(`App runing on ${port}`));
+app.listen(port, () => logger(`App runing on ${port}`));
 
-module.exports = server;
+module.exports = app;

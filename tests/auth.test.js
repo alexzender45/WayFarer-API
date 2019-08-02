@@ -17,13 +17,6 @@ const adminUser = {
   password: 'password',
   is_admim: 'admin',
 };
-const incorrectUser = {
-  first_name: 'Samuel',
-  last_name: 'Olaoye',
-  email: faker.internet.email(),
-  password: 'passwordr',
-};
-
 // Define the expect assertion
 const { expect } = chai;
 
@@ -70,18 +63,6 @@ describe(`POST ${signinUrl}`, () => {
       .send(adminUser)
       .end((err, res) => {
         expect(res.status).to.be.equal(201);
-        done();
-      });
-  });
-});
-describe(`POST ${signinUrl}`, () => {
-  it('should not signin user with incorrect password or email', (done) => {
-    chai
-      .request(app)
-      .post(signinUrl)
-      .send(incorrectUser)
-      .end((err, res) => {
-        expect(res.status).to.be.equal(401);
         done();
       });
   });
